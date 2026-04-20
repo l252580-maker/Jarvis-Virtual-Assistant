@@ -14,7 +14,8 @@ import os
 
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
-newsapi = "4f292a07c3ee4ad3bfa6bcfb52b2051e"
+newsapi = "YOUR_NEWS_API"
+google_api = "Your_GOOGLE_API"
 def speak_old(text):
     # Legacy TTS using pyttsx3 (offline, kept as fallback)
     engine.say(text)
@@ -44,7 +45,7 @@ def speak(text):
 def aiProcess(command):
     # Initialize the Gemini client with API key
     client = genai.Client(
-        api_key="AIzaSyCMaazkyLh1E4RPaoTTH8IN5DmAJVr4u10"
+        api_key=google_api
     )
 
     # Send the user's command to Gemini with a system persona defined
